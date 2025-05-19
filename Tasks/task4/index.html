@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .choose{
+            width: 20%;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,11 +19,13 @@
 ">
         <h1 class="text-center text-dark">Calculator</h1>
 
-        <input id="num1" type="text" class="form-control mb-2" placeholder="Enter first number">
-        <input id="num2" type="text" class="form-control mb-2" placeholder="Enter second number">
+        <input id="num1" type="text" class="form-control mb-4" placeholder="Enter first number">
+        <input id="num2" type="text" class="form-control mb-3" placeholder="Enter second number">
 
-        <div class="text-dark" style="font-size: 20px;">
-            <select onchange="sum(this.value)">
+        <div class="text-dark mt-4
+        " style="font-size: 20px;">
+            <select onchange="sum(value)" class="choose" >
+                <option value="" disabled selected>Select</option>
                 <option value="1">+</option>
                 <option value="2">-</option>    
                 <option value="3">*</option>
@@ -25,8 +33,8 @@
             </select>
         </div>
 
-        <div>
-            <b id="answer"></b>
+        <div class="mt-5">
+            <b id="answer" style="font-size: 25px;"></b>
         </div>
     </div>
 
